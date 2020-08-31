@@ -22,7 +22,6 @@
 		B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC324FC5DCA007D515F /* LoginViewController.swift */; };
 		B817B0C8BDC27F4BFF461C80 /* Pods_BRCT1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A65EB71C0FE493B83BE91D9 /* Pods_BRCT1.framework */; };
 		E23BCF8CDE7817916F394AE3 /* Pods_BRCT1_BRCT1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830594B9BC567D1D43E9CA68 /* Pods_BRCT1_BRCT1UITests.framework */; };
-		E2857F9E24FDB44B0056B316 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2857F9D24FDB44B0056B316 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 		B6F25CC124FC5D99007D515F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F25CC324FC5DCA007D515F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D30426F82C4FC4921FA1910B /* Pods-BRCT1-BRCT1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1-BRCT1UITests.release.xcconfig"; path = "Target Support Files/Pods-BRCT1-BRCT1UITests/Pods-BRCT1-BRCT1UITests.release.xcconfig"; sourceTree = "<group>"; };
-		E2857F9D24FDB44B0056B316 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F208798A335763C16841BAAA /* Pods-BRCT1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1.debug.xcconfig"; path = "Target Support Files/Pods-BRCT1/Pods-BRCT1.debug.xcconfig"; sourceTree = "<group>"; };
 		FE019BF21A5270A106F9F855 /* Pods-BRCT1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1.release.xcconfig"; path = "Target Support Files/Pods-BRCT1/Pods-BRCT1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +174,6 @@
 				B6F25CC124FC5D99007D515F /* ProfileViewController.swift */,
 				B686568124F8871600F0CAC1 /* ExploreViewController.swift */,
 				B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */,
-				E2857F9D24FDB44B0056B316 /* File.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,7 +432,6 @@
 				B686568024F8871600F0CAC1 /* EventsViewController.swift in Sources */,
 				B630AB5E24FD88FE0039FAEA /* InfoViewController.swift in Sources */,
 				B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */,
-				E2857F9E24FDB44B0056B316 /* File.swift in Sources */,
 				B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */,
 				B686567E24F8871600F0CAC1 /* SceneDelegate.swift in Sources */,
 			);
