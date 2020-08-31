@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  BRCT1
 //
 //  Created by Shruti Agarwal on 8/27/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class EventsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
