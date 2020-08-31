@@ -16,10 +16,6 @@ class ExploreViewController: UIViewController {
     var clubs:[String] = []
     
     
-    
-    
-    let randomNames = ["shruti", "shrey", "papa", "mama"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,9 +27,6 @@ class ExploreViewController: UIViewController {
         getClubNames()
 
         
-        
-        
-        
     }
     
 
@@ -44,7 +37,7 @@ class ExploreViewController: UIViewController {
                 //worked
                 let clubNames:JSON = JSON(response.result.value!)
                 
-                for index in 1...15 {
+                for index in 1...clubNames.count {
                     self.clubs.append(clubNames[index]["CLUB_NAME"].stringValue)
                 }
                 

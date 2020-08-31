@@ -1,0 +1,6 @@
+framework module Pods_BRCT1Tests {
+  umbrella header "Pods-BRCT1Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

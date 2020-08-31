@@ -77,6 +77,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JlB-dm-qSg" kind="show" id="nCn-Ni-zfv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -98,6 +101,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="b3p-0O-QsJ">
+            <objects>
+                <viewController id="JlB-dm-qSg" customClass="InfoViewController" customModule="BRCT1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0QO-gL-kkw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rRY-ZR-qpJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lda-h1-yJy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ek7-f5-Cif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="370"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="3sT-uO-Wtj">
