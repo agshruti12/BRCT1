@@ -13,6 +13,9 @@ import SwiftyJSON
 class ExploreViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var clubs:[String] = []
+    
+    
     
     
     let randomNames = ["shruti", "shrey", "papa", "mama"]
@@ -21,15 +24,37 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        getClubNames()
+
+        
         
         
         
     }
+    
 
-    func getClubNames() -> [String] {
-        return [""]
+    func getClubNames() {
+        Alamofire.request("http:localhost:3003/clubnames", method: .get).responseJSON {
+            response in
+            if response.result.isSuccess {
+                //worked
+                let clubNames:JSON = JSON(response.result.value!)
+                
+                for index in 1...15 {
+                    self.clubs.append(clubNames[index]["CLUB_NAME"].stringValue)
+                }
+                
+                self.tableView.reloadData()
+                
+            } else {
+                //didn't work
+                print("error: \(String(describing: response.result.error))")
+            }
+        }
     }
 
 }
@@ -37,14 +62,14 @@ class ExploreViewController: UIViewController {
 extension ExploreViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return randomNames.count
+        return clubs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //get cells
         let cell = tableView.dequeueReusableCell(withIdentifier: "clubCell", for: indexPath)
-        
-        cell.textLabel?.text = randomNames[indexPath.row]
+
+        cell.textLabel?.text = clubs[indexPath.row]
         return cell
     }
     
