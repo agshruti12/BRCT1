@@ -74,6 +74,8 @@ extension ExploreViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print("i was tapped!")
+        
+        
     }
 
     
