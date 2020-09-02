@@ -24,3 +24,6 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+BRCT1.xcodeproj/xcuserdata/shreyagarwal.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Pods.xcodeproj/xcuserdata/shreyagarwal.xcuserdatad/xcschemes/xcschememanagement.plist
