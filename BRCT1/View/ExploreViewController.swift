@@ -31,14 +31,14 @@ class ExploreViewController: UIViewController {
     
 
     func getClubNames() {
-        Alamofire.request("http:localhost:3003/clubnames", method: .get).responseJSON {
+        Alamofire.request("http:192.168.1.41:3003/clubnames", method: .get).responseJSON {
             response in
             if response.result.isSuccess {
                 //worked
                 let clubNames:JSON = JSON(response.result.value!)
                 
-                for index in 1...clubNames.count {
-                    self.clubs.append(clubNames[index]["CLUB_NAME"].stringValue)
+                for index in 0...clubNames.count {
+                    self.clubs.append(clubNames[index]["club_name"].stringValue)
                 }
                 
                 self.tableView.reloadData()

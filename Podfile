@@ -10,6 +10,10 @@ target 'BRCT1' do
   pod 'SwiftyJSON'
   pod 'SVProgressHUD'
 
+  #Pods for Authentication
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  
   target 'BRCT1Tests' do
     inherit! :search_paths
     # Pods for testing
