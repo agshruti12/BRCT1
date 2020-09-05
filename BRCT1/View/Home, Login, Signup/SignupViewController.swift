@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
+import SwiftyJSON
+import Alamofire
 
 class SignupViewController: UIViewController {
-
+    
     @IBOutlet weak var signupStatus: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,12 +31,24 @@ class SignupViewController: UIViewController {
         
         if studentButton.isSelected {
             print("student selected")
-            if let email = emailTextField.text, let password = passwordTextField.text {
+            if let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
                         self.errorMessage.text = e.localizedDescription
                     } else {
                         //Navigate to Student home page
+                        let json = ["name":name, "email": email, "password":password, "isStudent":true] as [String : Any]
+                        Alamofire.request("http:192.168.1.41:3003/user_create", method: .post, parameters: json, encoding: JSONEncoding.default)
+                        .responseJSON {response in
+                            if response.result.isSuccess {
+                                //worked
+                                print("success!")
+        
+                            } else {
+                                //didn't work
+                                print("error: \(String(describing: response.result.error))")
+                            }
+                        }
                         self.performSegue(withIdentifier: "studentSignedUp", sender: self)
                     }
                 }
@@ -44,11 +58,23 @@ class SignupViewController: UIViewController {
             
         } else if teacherButton.isSelected {
             print("advisor selected")
-            if let email = emailTextField.text, let password = passwordTextField.text {
+            if let name = nameTextField.text, let email = emailTextField.text, let password = passwordTextField.text {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
                         self.errorMessage.text = e.localizedDescription
                     } else {
+                        let json = ["name":name, "email": email, "password":password, "isStudent":false] as [String : Any]
+                        Alamofire.request("http:192.168.1.41:3003/user_create", method: .post, parameters: json, encoding: JSONEncoding.default)
+                        .responseJSON {response in
+                            if response.result.isSuccess {
+                                //worked
+                                print("success!")
+        
+                            } else {
+                                //didn't work
+                                print("error: \(String(describing: response.result.error))")
+                            }
+                        }
                         //Navigate to Student home page
                         self.performSegue(withIdentifier: "advisorSignedUp", sender: self)
                     }

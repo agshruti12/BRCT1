@@ -67,6 +67,7 @@
 		B686569B24F8871700F0CAC1 /* BRCT1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BRCT1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCT1UITests.swift; sourceTree = "<group>"; };
 		B68656A124F8871700F0CAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B69C4AED250053B200F160EE /* BRCT1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRCT1.entitlements; sourceTree = "<group>"; };
 		B6F25CC124FC5D99007D515F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F25CC324FC5DCA007D515F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D30426F82C4FC4921FA1910B /* Pods-BRCT1-BRCT1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1-BRCT1UITests.release.xcconfig"; path = "Target Support Files/Pods-BRCT1-BRCT1UITests/Pods-BRCT1-BRCT1UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 		B686567A24F8871600F0CAC1 /* BRCT1 */ = {
 			isa = PBXGroup;
 			children = (
+				B69C4AED250053B200F160EE /* BRCT1.entitlements */,
 				B6F25CC524FC5E0E007D515F /* View */,
 				B686567B24F8871600F0CAC1 /* AppDelegate.swift */,
 				B686567D24F8871600F0CAC1 /* SceneDelegate.swift */,
@@ -176,8 +178,8 @@
 		B6F25CC524FC5E0E007D515F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B686567F24F8871600F0CAC1 /* EventsViewController.swift */,
 				E23350FF2502EB360053B9A7 /* Home, Login, Signup */,
+				B686567F24F8871600F0CAC1 /* EventsViewController.swift */,
 				B6F25CC124FC5D99007D515F /* ProfileViewController.swift */,
 				B686568124F8871600F0CAC1 /* ExploreViewController.swift */,
 				B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */,
@@ -627,8 +629,9 @@
 			baseConfigurationReference = F208798A335763C16841BAAA /* Pods-BRCT1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BRCT1/BRCT1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NUDN2NK8A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BRCT1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -636,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shrutiagarwal.BRCT1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,8 +650,9 @@
 			baseConfigurationReference = FE019BF21A5270A106F9F855 /* Pods-BRCT1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BRCT1/BRCT1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NUDN2NK8A;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BRCT1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -655,6 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shrutiagarwal.BRCT1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
