@@ -19,12 +19,10 @@
 		B686569524F8871700F0CAC1 /* BRCT1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686569424F8871700F0CAC1 /* BRCT1Tests.swift */; };
 		B68656A024F8871700F0CAC1 /* BRCT1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */; };
 		B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC124FC5D99007D515F /* ProfileViewController.swift */; };
-		B6F25CC424FC5DCA007D515F /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC324FC5DCA007D515F /* StudentLoginViewController.swift */; };
+		B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC324FC5DCA007D515F /* LoginViewController.swift */; };
 		B817B0C8BDC27F4BFF461C80 /* Pods_BRCT1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A65EB71C0FE493B83BE91D9 /* Pods_BRCT1.framework */; };
 		E23350FC2502E9270053B9A7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23350FB2502E9270053B9A7 /* FirstViewController.swift */; };
-		E23350FE2502EAEA0053B9A7 /* AdvisorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23350FD2502EAEA0053B9A7 /* AdvisorLoginViewController.swift */; };
-		E23351012502EB850053B9A7 /* StudentSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23351002502EB850053B9A7 /* StudentSignupViewController.swift */; };
-		E23351032502EB9A0053B9A7 /* AdvisorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23351022502EB9A0053B9A7 /* AdvisorSignupViewController.swift */; };
+		E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23351002502EB850053B9A7 /* SignupViewController.swift */; };
 		E23351052502F3C80053B9A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E23351042502F3C80053B9A7 /* GoogleService-Info.plist */; };
 		E23BCF8CDE7817916F394AE3 /* Pods_BRCT1_BRCT1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830594B9BC567D1D43E9CA68 /* Pods_BRCT1_BRCT1UITests.framework */; };
 /* End PBXBuildFile section */
@@ -70,12 +68,10 @@
 		B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCT1UITests.swift; sourceTree = "<group>"; };
 		B68656A124F8871700F0CAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F25CC124FC5D99007D515F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B6F25CC324FC5DCA007D515F /* StudentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewController.swift; sourceTree = "<group>"; };
+		B6F25CC324FC5DCA007D515F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D30426F82C4FC4921FA1910B /* Pods-BRCT1-BRCT1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1-BRCT1UITests.release.xcconfig"; path = "Target Support Files/Pods-BRCT1-BRCT1UITests/Pods-BRCT1-BRCT1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		E23350FB2502E9270053B9A7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E23350FD2502EAEA0053B9A7 /* AdvisorLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorLoginViewController.swift; sourceTree = "<group>"; };
-		E23351002502EB850053B9A7 /* StudentSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignupViewController.swift; sourceTree = "<group>"; };
-		E23351022502EB9A0053B9A7 /* AdvisorSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorSignupViewController.swift; sourceTree = "<group>"; };
+		E23351002502EB850053B9A7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E23351042502F3C80053B9A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F208798A335763C16841BAAA /* Pods-BRCT1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1.debug.xcconfig"; path = "Target Support Files/Pods-BRCT1/Pods-BRCT1.debug.xcconfig"; sourceTree = "<group>"; };
 		FE019BF21A5270A106F9F855 /* Pods-BRCT1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1.release.xcconfig"; path = "Target Support Files/Pods-BRCT1/Pods-BRCT1.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,10 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				E23350FB2502E9270053B9A7 /* FirstViewController.swift */,
-				B6F25CC324FC5DCA007D515F /* StudentLoginViewController.swift */,
-				E23350FD2502EAEA0053B9A7 /* AdvisorLoginViewController.swift */,
-				E23351002502EB850053B9A7 /* StudentSignupViewController.swift */,
-				E23351022502EB9A0053B9A7 /* AdvisorSignupViewController.swift */,
+				B6F25CC324FC5DCA007D515F /* LoginViewController.swift */,
+				E23351002502EB850053B9A7 /* SignupViewController.swift */,
 			);
 			path = "Home, Login, Signup";
 			sourceTree = "<group>";
@@ -451,14 +445,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F25CC424FC5DCA007D515F /* StudentLoginViewController.swift in Sources */,
+				B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */,
 				B686568224F8871600F0CAC1 /* ExploreViewController.swift in Sources */,
 				B686568024F8871600F0CAC1 /* EventsViewController.swift in Sources */,
 				E23350FC2502E9270053B9A7 /* FirstViewController.swift in Sources */,
-				E23350FE2502EAEA0053B9A7 /* AdvisorLoginViewController.swift in Sources */,
 				B630AB5E24FD88FE0039FAEA /* InfoViewController.swift in Sources */,
-				E23351012502EB850053B9A7 /* StudentSignupViewController.swift in Sources */,
-				E23351032502EB9A0053B9A7 /* AdvisorSignupViewController.swift in Sources */,
+				E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */,
 				B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */,
 				B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */,
 				B686567E24F8871600F0CAC1 /* SceneDelegate.swift in Sources */,
