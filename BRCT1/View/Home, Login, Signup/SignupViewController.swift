@@ -21,6 +21,9 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var studentButton: UIButton!
     @IBOutlet weak var teacherButton: UIButton!
+    
+    static var profileData:[Any]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

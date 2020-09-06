@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="woY-Z8-kNn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="woY-Z8-kNn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="4328" y="-295"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Advisor Tab Bar Controller-->
         <scene sceneID="DoB-yk-AuV">
             <objects>
-                <tabBarController id="ydj-M6-JeC" sceneMemberID="viewController">
+                <tabBarController id="ydj-M6-JeC" customClass="AdvisorTabBarController" customModule="BRCT1" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="qEx-He-i2T"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tkl-w8-wWK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="-265" y="-790"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Student Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="StudentTabBarController" customModule="BRCT1" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="s85-PV-OAr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

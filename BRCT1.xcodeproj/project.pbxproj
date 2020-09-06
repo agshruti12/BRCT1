@@ -18,6 +18,8 @@
 		B686568A24F8871700F0CAC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B686568824F8871700F0CAC1 /* LaunchScreen.storyboard */; };
 		B686569524F8871700F0CAC1 /* BRCT1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686569424F8871700F0CAC1 /* BRCT1Tests.swift */; };
 		B68656A024F8871700F0CAC1 /* BRCT1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */; };
+		B6B69B07250520DA0039A306 /* StudentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B69B06250520DA0039A306 /* StudentTabBarController.swift */; };
+		B6B69B09250520F80039A306 /* AdvisorTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B69B08250520F80039A306 /* AdvisorTabBarController.swift */; };
 		B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC124FC5D99007D515F /* ProfileViewController.swift */; };
 		B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC324FC5DCA007D515F /* LoginViewController.swift */; };
 		B817B0C8BDC27F4BFF461C80 /* Pods_BRCT1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A65EB71C0FE493B83BE91D9 /* Pods_BRCT1.framework */; };
@@ -68,6 +70,8 @@
 		B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCT1UITests.swift; sourceTree = "<group>"; };
 		B68656A124F8871700F0CAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B69C4AED250053B200F160EE /* BRCT1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRCT1.entitlements; sourceTree = "<group>"; };
+		B6B69B06250520DA0039A306 /* StudentTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTabBarController.swift; sourceTree = "<group>"; };
+		B6B69B08250520F80039A306 /* AdvisorTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorTabBarController.swift; sourceTree = "<group>"; };
 		B6F25CC124FC5D99007D515F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F25CC324FC5DCA007D515F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D30426F82C4FC4921FA1910B /* Pods-BRCT1-BRCT1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1-BRCT1UITests.release.xcconfig"; path = "Target Support Files/Pods-BRCT1-BRCT1UITests/Pods-BRCT1-BRCT1UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B69C4AED250053B200F160EE /* BRCT1.entitlements */,
+				B6B69B0A250541620039A306 /* Tab Bars */,
 				B6F25CC524FC5E0E007D515F /* View */,
 				B686567B24F8871600F0CAC1 /* AppDelegate.swift */,
 				B686567D24F8871600F0CAC1 /* SceneDelegate.swift */,
@@ -173,6 +178,15 @@
 				B68656A124F8871700F0CAC1 /* Info.plist */,
 			);
 			path = BRCT1UITests;
+			sourceTree = "<group>";
+		};
+		B6B69B0A250541620039A306 /* Tab Bars */ = {
+			isa = PBXGroup;
+			children = (
+				B6B69B06250520DA0039A306 /* StudentTabBarController.swift */,
+				B6B69B08250520F80039A306 /* AdvisorTabBarController.swift */,
+			);
+			path = "Tab Bars";
 			sourceTree = "<group>";
 		};
 		B6F25CC524FC5E0E007D515F /* View */ = {
@@ -452,6 +466,8 @@
 				B686568024F8871600F0CAC1 /* EventsViewController.swift in Sources */,
 				E23350FC2502E9270053B9A7 /* FirstViewController.swift in Sources */,
 				B630AB5E24FD88FE0039FAEA /* InfoViewController.swift in Sources */,
+				B6B69B09250520F80039A306 /* AdvisorTabBarController.swift in Sources */,
+				B6B69B07250520DA0039A306 /* StudentTabBarController.swift in Sources */,
 				E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */,
 				B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */,
 				B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */,

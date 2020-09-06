@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     
+    static var profileData:JSON!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +39,7 @@ class LoginViewController: UIViewController {
                             if response.result.isSuccess {
                                 //worked
                                 let userData:JSON = JSON(response.result.value!)
+                                LoginViewController.profileData = userData
                                 let isStudent = (userData[0]["isStudent"].int)
                                 
                                 print(isStudent!)
