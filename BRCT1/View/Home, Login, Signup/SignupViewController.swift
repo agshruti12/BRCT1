@@ -45,17 +45,18 @@ class SignupViewController: UIViewController {
                         //Navigate to Student home page
                         let json = ["name":name, "email": email, "password":password, "isStudent":true] as [String : Any]
                         Alamofire.request("http:192.168.1.41:3003/user_create", method: .post, parameters: json, encoding: JSONEncoding.default)
-                        .responseJSON {response in
+                        .responseData {response in
                             if response.result.isSuccess {
                                 //worked
                                 print("success!")
+                                self.setUserId(email: email, isStudent: true)
         
                             } else {
                                 //didn't work
                                 print("error: \(String(describing: response.result.error))")
                             }
                         }
-                        self.performSegue(withIdentifier: "studentSignedUp", sender: self)
+                        
                     }
                 }
             }
@@ -71,10 +72,11 @@ class SignupViewController: UIViewController {
                     } else {
                         let json = ["name":name, "email": email, "password":password, "isStudent":false] as [String : Any]
                         Alamofire.request("http:192.168.1.41:3003/user_create", method: .post, parameters: json, encoding: JSONEncoding.default)
-                        .responseJSON {response in
+                        .responseData {response in
                             if response.result.isSuccess {
                                 //worked
                                 print("success!")
+                                self.setUserId(email: email, isStudent: false)
         
                             } else {
                                 //didn't work
@@ -82,7 +84,7 @@ class SignupViewController: UIViewController {
                             }
                         }
                         //Navigate to Student home page
-                        self.performSegue(withIdentifier: "advisorSignedUp", sender: self)
+                        
                     }
                 }
             }
@@ -108,6 +110,33 @@ class SignupViewController: UIViewController {
             signupStatus.text = "Advisor"
             
         }
+    }
+    
+    func setUserId(email:String, isStudent:Bool) {
+        
+        let url = "http:192.168.1.41:3003/userwithemail/" + email
+        
+        
+        Alamofire.request(url, method: .get).responseJSON {
+                response in
+                if response.result.isSuccess {
+                    //worked
+                    let userData:JSON = JSON(response.result.value!)
+                    
+                    FirstViewController.defaults.set(userData[0]["id"].int, forKey: "userId")
+                    
+                    if isStudent {
+                        self.performSegue(withIdentifier: "studentSignedUp", sender: self)
+                    } else {
+                        self.performSegue(withIdentifier: "advisorSignedUp", sender: self)
+                    }
+                    
+                } else {
+                    //didn't work
+                    print("error: \(String(describing: response.result.error))")
+                }
+        }
+        
     }
     
 }

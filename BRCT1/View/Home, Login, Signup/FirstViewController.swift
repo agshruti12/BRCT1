@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    static let defaults = UserDefaults.standard
+    
     @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         
