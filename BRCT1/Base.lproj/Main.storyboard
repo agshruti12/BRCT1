@@ -199,14 +199,75 @@
                     <view key="view" contentMode="scaleToFill" id="0QO-gL-kkw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qA-VK-55j">
+                                <rect key="frame" x="47" y="110" width="321" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tF-r0-9Tu">
+                                <rect key="frame" x="47" y="225" width="321" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5W-OF-zxZ">
+                                <rect key="frame" x="123" y="548" width="168" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-aK-CVB">
+                                <rect key="frame" x="143" y="629" width="128" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-vU-Q42">
+                                <rect key="frame" x="146" y="689" width="123" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-vb-CA4">
+                                <rect key="frame" x="20" y="772" width="374" height="52"/>
+                                <color key="backgroundColor" red="0.45440209409999999" green="0.58381935890000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="JlB-dm-qSg" eventType="touchUpInside" id="UcO-I0-8Sv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cXZ-vb-CA4" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="684" id="Es8-3V-b3W"/>
+                            <constraint firstItem="cXZ-vb-CA4" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="JGV-Aa-Lyw"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="bottom" secondItem="cXZ-vb-CA4" secondAttribute="bottom" constant="38" id="LXs-YU-9e8"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="cXZ-vb-CA4" secondAttribute="trailing" constant="20" id="y4n-55-uOt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rRY-ZR-qpJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lda-h1-yJy"/>
+                    <connections>
+                        <outlet property="advisorEmail" destination="yeL-vU-Q42" id="8Ae-2r-TnT"/>
+                        <outlet property="advisorName" destination="rqB-aK-CVB" id="5DM-yR-qZh"/>
+                        <outlet property="clubDescription" destination="2tF-r0-9Tu" id="cwN-CR-FF7"/>
+                        <outlet property="clubName" destination="8qA-VK-55j" id="a74-Hg-LD1"/>
+                        <outlet property="registerButton" destination="cXZ-vb-CA4" id="4Ht-Xz-9q0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ek7-f5-Cif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2393" y="485"/>
+            <point key="canvasLocation" x="2392.753623188406" y="484.82142857142856"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="K23-gW-61B">
@@ -540,7 +601,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="q8b-z7-tY0"/>
-        <segue reference="TuG-GE-VQa"/>
+        <segue reference="Wx4-XR-hV0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Panthers" width="400" height="400"/>
