@@ -13,8 +13,15 @@ class FirstViewController: UIViewController {
     static let defaults = UserDefaults.standard
     
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
+        if FirstViewController.defaults.bool(forKey: "studentLoggedIn") == true {
+            performSegue(withIdentifier: "studentAutoLogin", sender: self)
+        }
         
+        if FirstViewController.defaults.bool(forKey: "advisorLoggedIn") == true {
+            performSegue(withIdentifier: "teachAutoLogin", sender: self)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

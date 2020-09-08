@@ -311,6 +311,8 @@
                     <navigationItem key="navigationItem" id="R6x-X5-o93"/>
                     <connections>
                         <outlet property="titleLabel" destination="slM-rO-0Af" id="zFQ-VU-cV0"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="studentAutoLogin" id="q8b-z7-tY0"/>
+                        <segue destination="ydj-M6-JeC" kind="show" identifier="teachAutoLogin" id="TuG-GE-VQa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkg-1v-TL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -537,8 +539,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HlE-LG-djB"/>
-        <segue reference="DVa-Mg-1c9"/>
+        <segue reference="q8b-z7-tY0"/>
+        <segue reference="TuG-GE-VQa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Panthers" width="400" height="400"/>

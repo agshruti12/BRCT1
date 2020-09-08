@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.isTranslucent = true
         
+       
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
@@ -31,6 +32,7 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     self?.errorMessage.text = e.localizedDescription
                 } else {
+                    
                     
                     let url = "http:192.168.1.41:3003/userwithemail/" + email
                     
@@ -45,9 +47,13 @@ class LoginViewController: UIViewController {
                                 FirstViewController.defaults.set(userData[0]["id"].int, forKey: "userId")
                                 
                                 if isStudent == 1 {
+                                    FirstViewController.defaults.set(true, forKey: "studentLoggedIn")
+
                                     //perform student segue
                                     self?.performSegue(withIdentifier: "studentLoggedIn", sender: self)
                                 } else {
+                                    FirstViewController.defaults.set(true, forKey: "advisorLoggedIn")
+
                                     //perform advisor segue
                                     self?.performSegue(withIdentifier: "advisorLoggedIn", sender: self)
                                 }
@@ -64,34 +70,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-//    func studentStatus(_ email: String) -> Bool {
-//        let url = "http:192.168.1.41:3003/userwithemail/" + email
-//
-//
-//        Alamofire.request(url, method: .get).responseJSON {
-//                response in
-//                if response.result.isSuccess {
-//                    //worked
-//                    let userData:JSON = JSON(response.result.value!)
-//                    let isStudent = (userData[0]["isStudent"].int)
-//
-//                    print(isStudent!)
-//
-//                    if isStudent == 1 {
-//                        //perform student segue
-//
-//                    } else {
-//                        //perform advisor segue
-//
-//                    }
-//
-//                } else {
-//                    //didn't work
-//                    print("error: \(String(describing: response.result.error))")
-//                }
-//        }
-//
-//    }
+
     
     
     /*
