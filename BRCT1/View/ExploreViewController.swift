@@ -15,6 +15,8 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var clubs:[String] = []
     
+    var clubId:Int!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,11 +75,25 @@ extension ExploreViewController: UITableViewDataSource {
 extension ExploreViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("i was tapped!")
+        
+        clubId = indexPath.row + 1
         
         self.tableView.deselectRow(at: indexPath, animated: true)
         
+        performSegue(withIdentifier: "toClubInfo", sender: self)
         
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toClubInfo" {
+
+            let infoVC = segue.destination as! InfoViewController
+
+            infoVC.clubId = self.clubId
+
+
+        }
     }
 
     

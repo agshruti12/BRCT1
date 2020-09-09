@@ -167,9 +167,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="JlB-dm-qSg" kind="show" id="nCn-Ni-zfv"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -186,6 +183,7 @@
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="tableView" destination="FVx-Cq-aWq" id="lhV-BP-NYG"/>
+                        <segue destination="JlB-dm-qSg" kind="show" identifier="toClubInfo" id="qaD-Mc-7xO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -200,37 +198,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qA-VK-55j">
-                                <rect key="frame" x="47" y="110" width="321" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qA-VK-55j">
+                                <rect key="frame" x="20" y="113" width="374" height="70"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tF-r0-9Tu">
-                                <rect key="frame" x="47" y="225" width="321" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tF-r0-9Tu">
+                                <rect key="frame" x="20" y="223" width="374" height="235"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5W-OF-zxZ">
-                                <rect key="frame" x="123" y="548" width="168" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advisor Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5W-OF-zxZ">
+                                <rect key="frame" x="20" y="548" width="374" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-aK-CVB">
-                                <rect key="frame" x="143" y="629" width="128" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advisor Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-aK-CVB">
+                                <rect key="frame" x="20" y="628" width="374" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-vU-Q42">
-                                <rect key="frame" x="146" y="689" width="123" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advisor Email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-vU-Q42">
+                                <rect key="frame" x="20" y="688" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -249,9 +242,29 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Y5W-OF-zxZ" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="460" id="2Zx-Kb-Sy8"/>
                             <constraint firstItem="cXZ-vb-CA4" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="684" id="Es8-3V-b3W"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="2tF-r0-9Tu" secondAttribute="trailing" constant="20" id="Ew7-RY-Uzh"/>
+                            <constraint firstItem="rqB-aK-CVB" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="IMV-TE-7W7"/>
                             <constraint firstItem="cXZ-vb-CA4" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="JGV-Aa-Lyw"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="Y5W-OF-zxZ" secondAttribute="trailing" constant="20" id="JnF-wc-pe9"/>
                             <constraint firstItem="rRY-ZR-qpJ" firstAttribute="bottom" secondItem="cXZ-vb-CA4" secondAttribute="bottom" constant="38" id="LXs-YU-9e8"/>
+                            <constraint firstItem="8qA-VK-55j" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="25" id="LjJ-Sy-EV9"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="yeL-vU-Q42" secondAttribute="trailing" constant="20" id="PwW-9S-fKd"/>
+                            <constraint firstItem="Y5W-OF-zxZ" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="Qa7-2y-5Tf"/>
+                            <constraint firstItem="cXZ-vb-CA4" firstAttribute="top" secondItem="yeL-vU-Q42" secondAttribute="bottom" constant="50" id="SVb-2b-ddd"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="rqB-aK-CVB" secondAttribute="trailing" constant="20" id="Ttm-Zm-Dy0"/>
+                            <constraint firstItem="2tF-r0-9Tu" firstAttribute="top" secondItem="8qA-VK-55j" secondAttribute="bottom" constant="40" id="dEZ-tL-4ND"/>
+                            <constraint firstItem="rqB-aK-CVB" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="540" id="fhQ-es-1Kd"/>
+                            <constraint firstItem="2tF-r0-9Tu" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="135" id="lPc-l9-vGU"/>
+                            <constraint firstItem="rqB-aK-CVB" firstAttribute="top" secondItem="Y5W-OF-zxZ" secondAttribute="bottom" constant="40" id="p6Z-3O-yug"/>
+                            <constraint firstItem="yeL-vU-Q42" firstAttribute="top" secondItem="rRY-ZR-qpJ" secondAttribute="top" constant="600" id="pHB-yP-TQS"/>
+                            <constraint firstItem="yeL-vU-Q42" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="paA-Ug-14T"/>
+                            <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="8qA-VK-55j" secondAttribute="trailing" constant="20" id="qB9-P7-1Or"/>
+                            <constraint firstItem="Y5W-OF-zxZ" firstAttribute="top" secondItem="2tF-r0-9Tu" secondAttribute="bottom" constant="90" id="t6Q-Lq-Zt3"/>
+                            <constraint firstItem="yeL-vU-Q42" firstAttribute="top" secondItem="rqB-aK-CVB" secondAttribute="bottom" constant="35" id="vSt-lc-OB3"/>
+                            <constraint firstItem="8qA-VK-55j" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="wkJ-iy-0tF"/>
+                            <constraint firstItem="2tF-r0-9Tu" firstAttribute="leading" secondItem="rRY-ZR-qpJ" secondAttribute="leading" constant="20" id="xec-yW-epj"/>
                             <constraint firstItem="rRY-ZR-qpJ" firstAttribute="trailing" secondItem="cXZ-vb-CA4" secondAttribute="trailing" constant="20" id="y4n-55-uOt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rRY-ZR-qpJ"/>
