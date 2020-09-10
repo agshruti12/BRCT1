@@ -80,6 +80,7 @@ class ProfileViewController: UIViewController {
         
         do {
             try Auth.auth().signOut()
+            FirstViewController.defaults.set(false, forKey: "studentLoggedIn")
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)

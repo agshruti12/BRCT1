@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
             performSegue(withIdentifier: "studentAutoLogin", sender: self)
         }
         
-        if FirstViewController.defaults.bool(forKey: "advisorLoggedIn") == true {
+        else if FirstViewController.defaults.bool(forKey: "advisorLoggedIn") == true {
             performSegue(withIdentifier: "teachAutoLogin", sender: self)
         }
     }
