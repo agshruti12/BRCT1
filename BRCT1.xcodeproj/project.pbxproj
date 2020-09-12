@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26B561DBFB9F28C58827017C /* Pods_BRCT1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC313B68931AEB65C1A429E /* Pods_BRCT1Tests.framework */; };
 		B630AB5E24FD88FE0039FAEA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */; };
+		B63E8B42250C37B30011A795 /* AInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63E8B41250C37B30011A795 /* AInfoViewController.swift */; };
 		B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686567B24F8871600F0CAC1 /* AppDelegate.swift */; };
 		B686567E24F8871600F0CAC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686567D24F8871600F0CAC1 /* SceneDelegate.swift */; };
 		B686568024F8871600F0CAC1 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686567F24F8871600F0CAC1 /* EventsViewController.swift */; };
@@ -57,6 +58,7 @@
 		830594B9BC567D1D43E9CA68 /* Pods_BRCT1_BRCT1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRCT1_BRCT1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC313B68931AEB65C1A429E /* Pods_BRCT1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRCT1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B63E8B41250C37B30011A795 /* AInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AInfoViewController.swift; sourceTree = "<group>"; };
 		B686567824F8871600F0CAC1 /* BRCT1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRCT1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B686567B24F8871600F0CAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B686567D24F8871600F0CAC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,9 +156,17 @@
 		B686567A24F8871600F0CAC1 /* BRCT1 */ = {
 			isa = PBXGroup;
 			children = (
+				E23350FF2502EB360053B9A7 /* Home, Login, Signup */,
+				E2E614FE250AEB62009FDB97 /* Student */,
+				E2E614FF250AEBAD009FDB97 /* Advisor */,
+				B6B69B0A250541620039A306 /* Tab Bars */,
+				B686567B24F8871600F0CAC1 /* AppDelegate.swift */,
+				B686567D24F8871600F0CAC1 /* SceneDelegate.swift */,
+				B686568324F8871600F0CAC1 /* Main.storyboard */,
 				B686568B24F8871700F0CAC1 /* Info.plist */,
-				E2E61500250AEBEB009FDB97 /* Supporting Files */,
-				B6F25CC524FC5E0E007D515F /* Swift Files */,
+				B686568624F8871700F0CAC1 /* Assets.xcassets */,
+				B686568824F8871700F0CAC1 /* LaunchScreen.storyboard */,
+				E23351042502F3C80053B9A7 /* GoogleService-Info.plist */,
 				B69C4AED250053B200F160EE /* BRCT1.entitlements */,
 			);
 			path = BRCT1;
@@ -189,20 +199,6 @@
 			path = "Tab Bars";
 			sourceTree = "<group>";
 		};
-		B6F25CC524FC5E0E007D515F /* Swift Files */ = {
-			isa = PBXGroup;
-			children = (
-				B686567B24F8871600F0CAC1 /* AppDelegate.swift */,
-				B686567D24F8871600F0CAC1 /* SceneDelegate.swift */,
-				E2E614FF250AEBAD009FDB97 /* Advisor */,
-				E23350FF2502EB360053B9A7 /* Home, Login, Signup */,
-				E2E614FE250AEB62009FDB97 /* Student */,
-				B686568324F8871600F0CAC1 /* Main.storyboard */,
-				B6B69B0A250541620039A306 /* Tab Bars */,
-			);
-			path = "Swift Files";
-			sourceTree = "<group>";
-		};
 		E23350FF2502EB360053B9A7 /* Home, Login, Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,18 +226,9 @@
 				E2E614FC250AEAA8009FDB97 /* MyClubsController.swift */,
 				E2E61501250AEC4E009FDB97 /* AdvisorProfileViewController.swift */,
 				E2E61503250AED4B009FDB97 /* AdvisorEventsViewController.swift */,
+				B63E8B41250C37B30011A795 /* AInfoViewController.swift */,
 			);
 			path = Advisor;
-			sourceTree = "<group>";
-		};
-		E2E61500250AEBEB009FDB97 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B686568624F8871700F0CAC1 /* Assets.xcassets */,
-				B686568824F8871700F0CAC1 /* LaunchScreen.storyboard */,
-				E23351042502F3C80053B9A7 /* GoogleService-Info.plist */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E6ACA25973A53BE8312F4530 /* Frameworks */ = {
@@ -504,6 +491,7 @@
 				B6B69B09250520F80039A306 /* AdvisorTabBarController.swift in Sources */,
 				B6B69B07250520DA0039A306 /* StudentTabBarController.swift in Sources */,
 				E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */,
+				B63E8B42250C37B30011A795 /* AInfoViewController.swift in Sources */,
 				B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */,
 				E2E614FD250AEAA8009FDB97 /* MyClubsController.swift in Sources */,
 				B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */,

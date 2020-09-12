@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import SwiftyJSON
 import Alamofire
+import FirebaseAuth
 
 class SignupViewController: UIViewController {
     

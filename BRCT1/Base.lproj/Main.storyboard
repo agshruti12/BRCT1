@@ -288,12 +288,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Clubs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oU-Tz-YRO">
-                                <rect key="frame" x="20" y="342" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Bd-ah-uD2">
                                 <rect key="frame" x="20" y="264" width="374" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -308,47 +302,25 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutPressed:" destination="YS6-9t-wFm" eventType="touchUpInside" id="JCl-ya-DJP"/>
+                                    <action selector="logoutPressed:" destination="dSw-et-ddg" eventType="touchUpInside" id="RlZ-cl-MEe"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VBj-JW-5rU">
-                                <rect key="frame" x="0.0" y="392" width="414" height="421"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userClubCell" id="xEu-b4-Pre">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xEu-b4-Pre" id="NeS-zy-h3l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Bd-ah-uD2" firstAttribute="top" secondItem="YAW-24-NB4" secondAttribute="bottom" id="31q-bH-q6d"/>
-                            <constraint firstItem="Tx0-8N-9zg" firstAttribute="trailing" secondItem="8oU-Tz-YRO" secondAttribute="trailing" constant="20" id="392-0e-hPk"/>
                             <constraint firstItem="zcF-GS-zis" firstAttribute="top" secondItem="Tx0-8N-9zg" secondAttribute="top" constant="9" id="4JH-Zg-07w"/>
                             <constraint firstItem="IHS-MU-20f" firstAttribute="leading" secondItem="Tx0-8N-9zg" secondAttribute="leading" constant="20" id="6dY-tt-x6T"/>
                             <constraint firstItem="Tx0-8N-9zg" firstAttribute="trailing" secondItem="2Bd-ah-uD2" secondAttribute="trailing" constant="20" id="EJh-JZ-e1I"/>
                             <constraint firstItem="IHS-MU-20f" firstAttribute="top" secondItem="zcF-GS-zis" secondAttribute="bottom" constant="5" id="I5h-hN-WEf"/>
-                            <constraint firstItem="VBj-JW-5rU" firstAttribute="top" secondItem="8oU-Tz-YRO" secondAttribute="bottom" constant="26" id="J80-WE-XnU"/>
                             <constraint firstItem="Tx0-8N-9zg" firstAttribute="trailing" secondItem="b8u-7H-n9o" secondAttribute="trailing" constant="20" id="LRl-eT-DaC"/>
-                            <constraint firstItem="VBj-JW-5rU" firstAttribute="leading" secondItem="Tx0-8N-9zg" secondAttribute="leading" id="Lgq-DJ-8kx"/>
                             <constraint firstItem="Tx0-8N-9zg" firstAttribute="trailing" secondItem="YAW-24-NB4" secondAttribute="trailing" constant="20" id="OBL-AK-LuQ"/>
                             <constraint firstItem="YAW-24-NB4" firstAttribute="top" secondItem="b8u-7H-n9o" secondAttribute="bottom" id="Shu-s9-hxA"/>
                             <constraint firstItem="b8u-7H-n9o" firstAttribute="top" secondItem="zcF-GS-zis" secondAttribute="bottom" constant="23" id="Wyy-Iw-YlK"/>
                             <constraint firstItem="Tx0-8N-9zg" firstAttribute="trailing" secondItem="zcF-GS-zis" secondAttribute="trailing" constant="25" id="YAK-wr-dxY"/>
-                            <constraint firstItem="VBj-JW-5rU" firstAttribute="top" secondItem="8oU-Tz-YRO" secondAttribute="bottom" constant="26" id="Yfp-Up-hwt"/>
-                            <constraint firstItem="VBj-JW-5rU" firstAttribute="bottom" secondItem="Tx0-8N-9zg" secondAttribute="bottom" id="aOA-DM-FqX"/>
                             <constraint firstItem="YAW-24-NB4" firstAttribute="top" secondItem="IHS-MU-20f" secondAttribute="bottom" constant="78" id="cOS-HO-MdT"/>
-                            <constraint firstItem="8oU-Tz-YRO" firstAttribute="top" secondItem="2Bd-ah-uD2" secondAttribute="bottom" constant="30" id="e95-dh-HN2"/>
-                            <constraint firstItem="8oU-Tz-YRO" firstAttribute="top" secondItem="2Bd-ah-uD2" secondAttribute="bottom" constant="30" id="et0-rl-pN4"/>
-                            <constraint firstItem="8oU-Tz-YRO" firstAttribute="leading" secondItem="Tx0-8N-9zg" secondAttribute="leading" constant="20" id="hRE-xN-gPT"/>
                             <constraint firstItem="YAW-24-NB4" firstAttribute="top" secondItem="b8u-7H-n9o" secondAttribute="bottom" id="jTF-y0-ALa"/>
                             <constraint firstItem="2Bd-ah-uD2" firstAttribute="top" secondItem="YAW-24-NB4" secondAttribute="bottom" id="oVH-Q5-PYb"/>
-                            <constraint firstItem="VBj-JW-5rU" firstAttribute="trailing" secondItem="Tx0-8N-9zg" secondAttribute="trailing" id="tWb-NI-9Rx"/>
                             <constraint firstItem="IHS-MU-20f" firstAttribute="top" secondItem="zcF-GS-zis" secondAttribute="bottom" constant="5" id="taP-Sh-QM8"/>
                             <constraint firstItem="2Bd-ah-uD2" firstAttribute="leading" secondItem="Tx0-8N-9zg" secondAttribute="leading" constant="20" id="vQS-pa-5E0"/>
                             <constraint firstItem="YAW-24-NB4" firstAttribute="leading" secondItem="Tx0-8N-9zg" secondAttribute="leading" constant="20" id="xp0-Xf-s7Z"/>
@@ -359,6 +331,10 @@
                         <viewLayoutGuide key="safeArea" id="Tx0-8N-9zg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="3j9-uv-ESW"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="2Bd-ah-uD2" id="HGf-dE-XQh"/>
+                        <outlet property="nameLabel" destination="b8u-7H-n9o" id="k8E-0s-zvG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6a-u5-pza" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,7 +352,7 @@
                                 <rect key="frame" x="0.0" y="123" width="414" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xs9-8d-ELb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="advisorClubCell" id="xs9-8d-ELb">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xs9-8d-ELb" id="gC4-tU-wev">
@@ -412,17 +388,17 @@
                     <navigationItem key="navigationItem" title="Title" id="R3m-YG-fhX"/>
                     <connections>
                         <outlet property="tableView" destination="8Gz-59-57Q" id="gEP-iV-TeS"/>
-                        <segue destination="V5O-56-Lhi" kind="show" identifier="advisorInfoClub" id="YkH-5f-Dmw"/>
+                        <segue destination="V5O-56-Lhi" kind="show" identifier="toAdvisorInfo" id="YkH-5f-Dmw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxT-fr-fQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5086.9565217391309" y="104.46428571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="yxe-a7-uyZ">
             <objects>
-                <viewController id="V5O-56-Lhi" sceneMemberID="viewController">
+                <viewController id="V5O-56-Lhi" customClass="AInfoViewController" customModule="BRCT1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="74d-DV-Gbc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,7 +412,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerPressed:" destination="JlB-dm-qSg" eventType="touchUpInside" id="LxV-ol-EnP"/>
+                                    <action selector="addEvent:" destination="V5O-56-Lhi" eventType="touchUpInside" id="Tw3-ts-ufZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k9-2y-lnl">
@@ -446,12 +422,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot4-ei-YaI">
+                                <rect key="frame" x="20" y="171" width="374" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lzC-dC-8oq">
                                 <rect key="frame" x="0.0" y="455" width="414" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XAu-Ri-jBb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="studentCell" id="XAu-Ri-jBb">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XAu-Ri-jBb" id="kFt-1L-jT1">
@@ -468,18 +451,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot4-ei-YaI">
-                                <rect key="frame" x="20" y="171" width="374" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rav-Yj-DbU"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zwl-WD-Rtb"/>
+                    <connections>
+                        <outlet property="clubDescription" destination="Ot4-ei-YaI" id="DZd-1m-05u"/>
+                        <outlet property="clubName" destination="5k9-2y-lnl" id="p72-Fl-Y97"/>
+                        <outlet property="tableView" destination="lzC-dC-8oq" id="CMw-vb-IiR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtU-V4-alI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
