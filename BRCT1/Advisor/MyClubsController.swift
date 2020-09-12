@@ -45,12 +45,16 @@ class MyClubsController: UIViewController {
               if response.result.isSuccess {
                   //worked
                   let clubNames:JSON = JSON(response.result.value!)
-                  
-                  for index in 0...(clubNames.count-1) {
-                    self.clubs.append(clubNames[index]["club_name"].stringValue)
-                    
-                    self.clubIds.append(clubNames[index]["id"].int!)
+                
+                
+                  if clubNames.count > 0 {
+                    for index in 0...(clubNames.count-1) {
+                      self.clubs.append(clubNames[index]["club_name"].stringValue)
+                      
+                      self.clubIds.append(clubNames[index]["id"].int!)
+                    }
                   }
+                  
                   
                   self.tableView.reloadData()
                   
@@ -62,6 +66,8 @@ class MyClubsController: UIViewController {
       }
     
     @IBAction func newClubPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "addNewClub", sender: self)
         
         
     }

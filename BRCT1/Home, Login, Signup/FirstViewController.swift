@@ -16,6 +16,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         if FirstViewController.defaults.bool(forKey: "studentLoggedIn") == true {
+            print("student")
             performSegue(withIdentifier: "studentAutoLogin", sender: self)
         }
         

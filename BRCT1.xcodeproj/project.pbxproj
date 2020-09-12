@@ -18,6 +18,7 @@
 		B686568A24F8871700F0CAC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B686568824F8871700F0CAC1 /* LaunchScreen.storyboard */; };
 		B686569524F8871700F0CAC1 /* BRCT1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686569424F8871700F0CAC1 /* BRCT1Tests.swift */; };
 		B68656A024F8871700F0CAC1 /* BRCT1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */; };
+		B6891ED5250D48B600906B91 /* AddClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6891ED4250D48B600906B91 /* AddClubViewController.swift */; };
 		B6B69B07250520DA0039A306 /* StudentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B69B06250520DA0039A306 /* StudentTabBarController.swift */; };
 		B6B69B09250520F80039A306 /* AdvisorTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B69B08250520F80039A306 /* AdvisorTabBarController.swift */; };
 		B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC124FC5D99007D515F /* ProfileViewController.swift */; };
@@ -75,6 +76,7 @@
 		B686569B24F8871700F0CAC1 /* BRCT1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BRCT1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B686569F24F8871700F0CAC1 /* BRCT1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRCT1UITests.swift; sourceTree = "<group>"; };
 		B68656A124F8871700F0CAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6891ED4250D48B600906B91 /* AddClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClubViewController.swift; sourceTree = "<group>"; };
 		B69C4AED250053B200F160EE /* BRCT1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRCT1.entitlements; sourceTree = "<group>"; };
 		B6B69B06250520DA0039A306 /* StudentTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTabBarController.swift; sourceTree = "<group>"; };
 		B6B69B08250520F80039A306 /* AdvisorTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorTabBarController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				E2E61501250AEC4E009FDB97 /* AdvisorProfileViewController.swift */,
 				E2E61503250AED4B009FDB97 /* AdvisorEventsViewController.swift */,
 				B63E8B41250C37B30011A795 /* AInfoViewController.swift */,
+				B6891ED4250D48B600906B91 /* AddClubViewController.swift */,
 			);
 			path = Advisor;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				E2E614FD250AEAA8009FDB97 /* MyClubsController.swift in Sources */,
 				B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */,
 				B686567E24F8871600F0CAC1 /* SceneDelegate.swift in Sources */,
+				B6891ED5250D48B600906B91 /* AddClubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
