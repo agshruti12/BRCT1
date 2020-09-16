@@ -24,6 +24,7 @@
 		B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC124FC5D99007D515F /* ProfileViewController.swift */; };
 		B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F25CC324FC5DCA007D515F /* LoginViewController.swift */; };
 		B817B0C8BDC27F4BFF461C80 /* Pods_BRCT1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A65EB71C0FE493B83BE91D9 /* Pods_BRCT1.framework */; };
+		E2011C8A25103806002AA8B2 /* AdvisorEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2011C8925103806002AA8B2 /* AdvisorEventsViewController.swift */; };
 		E23350FC2502E9270053B9A7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23350FB2502E9270053B9A7 /* FirstViewController.swift */; };
 		E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23351002502EB850053B9A7 /* SignupViewController.swift */; };
 		E23351052502F3C80053B9A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E23351042502F3C80053B9A7 /* GoogleService-Info.plist */; };
@@ -31,9 +32,9 @@
 		E2A63792250C53E500CF2AE7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A63790250C53E500CF2AE7 /* CustomCell.swift */; };
 		E2A63793250C53E500CF2AE7 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A63791250C53E500CF2AE7 /* CustomCell.xib */; };
 		E2A637B9250D24FE00CF2AE7 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A637B8250D24FE00CF2AE7 /* EventsViewController.swift */; };
+		E2D2B6A92512A08F0066C9C6 /* EventsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2B6A82512A08F0066C9C6 /* EventsInfoViewController.swift */; };
 		E2E614FD250AEAA8009FDB97 /* MyClubsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E614FC250AEAA8009FDB97 /* MyClubsController.swift */; };
 		E2E61502250AEC4E009FDB97 /* AdvisorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E61501250AEC4E009FDB97 /* AdvisorProfileViewController.swift */; };
-		E2E61504250AED4B009FDB97 /* AdvisorEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E61503250AED4B009FDB97 /* AdvisorEventsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,15 +84,16 @@
 		B6F25CC124FC5D99007D515F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F25CC324FC5DCA007D515F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D30426F82C4FC4921FA1910B /* Pods-BRCT1-BRCT1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1-BRCT1UITests.release.xcconfig"; path = "Target Support Files/Pods-BRCT1-BRCT1UITests/Pods-BRCT1-BRCT1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2011C8925103806002AA8B2 /* AdvisorEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorEventsViewController.swift; sourceTree = "<group>"; };
 		E23350FB2502E9270053B9A7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E23351002502EB850053B9A7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E23351042502F3C80053B9A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2A63790250C53E500CF2AE7 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E2A63791250C53E500CF2AE7 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E2A637B8250D24FE00CF2AE7 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		E2D2B6A82512A08F0066C9C6 /* EventsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInfoViewController.swift; sourceTree = "<group>"; };
 		E2E614FC250AEAA8009FDB97 /* MyClubsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubsController.swift; sourceTree = "<group>"; };
 		E2E61501250AEC4E009FDB97 /* AdvisorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorProfileViewController.swift; sourceTree = "<group>"; };
-		E2E61503250AED4B009FDB97 /* AdvisorEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorEventsViewController.swift; sourceTree = "<group>"; };
 		F208798A335763C16841BAAA /* Pods-BRCT1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1.debug.xcconfig"; path = "Target Support Files/Pods-BRCT1/Pods-BRCT1.debug.xcconfig"; sourceTree = "<group>"; };
 		FE019BF21A5270A106F9F855 /* Pods-BRCT1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1.release.xcconfig"; path = "Target Support Files/Pods-BRCT1/Pods-BRCT1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +226,7 @@
 				B686568124F8871600F0CAC1 /* ExploreViewController.swift */,
 				B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */,
 				E2A637B8250D24FE00CF2AE7 /* EventsViewController.swift */,
+				E2D2B6A82512A08F0066C9C6 /* EventsInfoViewController.swift */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -233,9 +236,9 @@
 			children = (
 				E2E614FC250AEAA8009FDB97 /* MyClubsController.swift */,
 				E2E61501250AEC4E009FDB97 /* AdvisorProfileViewController.swift */,
-				E2E61503250AED4B009FDB97 /* AdvisorEventsViewController.swift */,
 				B63E8B41250C37B30011A795 /* AInfoViewController.swift */,
 				B6891ED4250D48B600906B91 /* AddClubViewController.swift */,
+				E2011C8925103806002AA8B2 /* AdvisorEventsViewController.swift */,
 			);
 			path = Advisor;
 			sourceTree = "<group>";
@@ -494,16 +497,17 @@
 				B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */,
 				E2E61502250AEC4E009FDB97 /* AdvisorProfileViewController.swift in Sources */,
 				B686568224F8871600F0CAC1 /* ExploreViewController.swift in Sources */,
-				E2E61504250AED4B009FDB97 /* AdvisorEventsViewController.swift in Sources */,
 				E23350FC2502E9270053B9A7 /* FirstViewController.swift in Sources */,
 				E2A63792250C53E500CF2AE7 /* CustomCell.swift in Sources */,
 				B630AB5E24FD88FE0039FAEA /* InfoViewController.swift in Sources */,
 				B6B69B09250520F80039A306 /* AdvisorTabBarController.swift in Sources */,
+				E2D2B6A92512A08F0066C9C6 /* EventsInfoViewController.swift in Sources */,
 				B6B69B07250520DA0039A306 /* StudentTabBarController.swift in Sources */,
 				E2A637B9250D24FE00CF2AE7 /* EventsViewController.swift in Sources */,
 				E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */,
 				B63E8B42250C37B30011A795 /* AInfoViewController.swift in Sources */,
 				B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */,
+				E2011C8A25103806002AA8B2 /* AdvisorEventsViewController.swift in Sources */,
 				E2E614FD250AEAA8009FDB97 /* MyClubsController.swift in Sources */,
 				B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */,
 				B686567E24F8871600F0CAC1 /* SceneDelegate.swift in Sources */,
