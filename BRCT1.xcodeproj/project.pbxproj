@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26B561DBFB9F28C58827017C /* Pods_BRCT1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC313B68931AEB65C1A429E /* Pods_BRCT1Tests.framework */; };
+		B600FA412513F3350004F739 /* AEventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600FA402513F3350004F739 /* AEventInfoViewController.swift */; };
+		B600FA432513F34C0004F739 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600FA422513F34C0004F739 /* NewEventViewController.swift */; };
 		B630AB5E24FD88FE0039FAEA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */; };
 		B63E8B42250C37B30011A795 /* AInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63E8B41250C37B30011A795 /* AInfoViewController.swift */; };
 		B686567C24F8871600F0CAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686567B24F8871600F0CAC1 /* AppDelegate.swift */; };
@@ -61,6 +63,8 @@
 		5986EC5DA75BD4999CE947D9 /* Pods-BRCT1-BRCT1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRCT1-BRCT1UITests.debug.xcconfig"; path = "Target Support Files/Pods-BRCT1-BRCT1UITests/Pods-BRCT1-BRCT1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		830594B9BC567D1D43E9CA68 /* Pods_BRCT1_BRCT1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRCT1_BRCT1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC313B68931AEB65C1A429E /* Pods_BRCT1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRCT1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B600FA402513F3350004F739 /* AEventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEventInfoViewController.swift; sourceTree = "<group>"; };
+		B600FA422513F34C0004F739 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B63E8B41250C37B30011A795 /* AInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AInfoViewController.swift; sourceTree = "<group>"; };
 		B686567824F8871600F0CAC1 /* BRCT1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRCT1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +243,8 @@
 				B63E8B41250C37B30011A795 /* AInfoViewController.swift */,
 				B6891ED4250D48B600906B91 /* AddClubViewController.swift */,
 				E2011C8925103806002AA8B2 /* AdvisorEventsViewController.swift */,
+				B600FA402513F3350004F739 /* AEventInfoViewController.swift */,
+				B600FA422513F34C0004F739 /* NewEventViewController.swift */,
 			);
 			path = Advisor;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			files = (
 				B6F25CC424FC5DCA007D515F /* LoginViewController.swift in Sources */,
 				E2E61502250AEC4E009FDB97 /* AdvisorProfileViewController.swift in Sources */,
+				B600FA432513F34C0004F739 /* NewEventViewController.swift in Sources */,
 				B686568224F8871600F0CAC1 /* ExploreViewController.swift in Sources */,
 				E23350FC2502E9270053B9A7 /* FirstViewController.swift in Sources */,
 				E2A63792250C53E500CF2AE7 /* CustomCell.swift in Sources */,
@@ -504,6 +511,7 @@
 				E2D2B6A92512A08F0066C9C6 /* EventsInfoViewController.swift in Sources */,
 				B6B69B07250520DA0039A306 /* StudentTabBarController.swift in Sources */,
 				E2A637B9250D24FE00CF2AE7 /* EventsViewController.swift in Sources */,
+				B600FA412513F3350004F739 /* AEventInfoViewController.swift in Sources */,
 				E23351012502EB850053B9A7 /* SignupViewController.swift in Sources */,
 				B63E8B42250C37B30011A795 /* AInfoViewController.swift in Sources */,
 				B6F25CC224FC5D99007D515F /* ProfileViewController.swift in Sources */,
