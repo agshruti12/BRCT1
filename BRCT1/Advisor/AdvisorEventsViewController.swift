@@ -57,6 +57,20 @@ class AdvisorEventsViewController: UITableViewController {
         return 125
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        selected = indexPath.row
+        performSegue(withIdentifier: "advisorEventInfo", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "advisorEventInfo" {
+            let destinationVC = segue.destination as! AEventInfoViewController
+            
+            destinationVC.cellData = [arrayOfCellData[selected].eventName, eventDescrips[selected], arrayOfCellData[selected].clubName, arrayOfCellData[selected].startTime, arrayOfCellData[selected].endTime, arrayOfCellData[selected].eventDate]
+        }
+    }
+    
     func getEventsData() {
         let url  = "http:192.168.1.41:3003/eventsforadvisor/" + String(FirstViewController.defaults.integer(forKey: "userId"))
         Alamofire.request(url, method: .get).responseJSON {

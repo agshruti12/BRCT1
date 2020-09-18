@@ -10,13 +10,34 @@ import UIKit
 
 class AEventInfoViewController: UIViewController {
 
+    var cellData = [String]()
+    
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var eventDescrip: UILabel!
+    @IBOutlet weak var clubName: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var calendarButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        configureScreen()
     }
     
-
+    func configureScreen(){
+           eventName.text = cellData[0]
+           eventDescrip.text = cellData[1]
+           clubName.text = cellData[2]
+           startTime.text = cellData[3]
+           endTime.text = cellData[4]
+           dateLabel.text = cellData[5]
+       }
+    
+    @IBAction func addToCalendar(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

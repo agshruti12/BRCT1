@@ -62,6 +62,16 @@ class AInfoViewController: UIViewController {
     }
     
     @IBAction func addEvent(_ sender: UIButton) {
+        performSegue(withIdentifier: "addEvent", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addEvent" {
+            let destinationVC = segue.destination as! NewEventViewController
+            
+            destinationVC.clubId = clubId
+        }
     }
     
     func getStudents(){

@@ -7,24 +7,47 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class NewEventViewController: UIViewController {
+    
+    var clubId:Int!
 
+    @IBOutlet weak var eventField: UITextField!
+    @IBOutlet weak var descripField: UITextField!
+    @IBOutlet weak var startField: UITextField!
+    @IBOutlet weak var endTime: UITextField!
+    @IBOutlet weak var dateField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func addEvent(_ sender: Any) {
+        if let title = eventField.text, let descrip = descripField.text, let startTime = startField.text, let endTime = endTime.text, let date = dateField.text {
+            let json = ["title":title, "description": descrip,"start":startTime, "end": endTime, "date":date, "club_id": clubId!] as [String : Any]
+            Alamofire.request("http:192.168.1.41:3003/event_create", method: .post, parameters: json, encoding: JSONEncoding.default)
+            .responseData {response in
+                if response.result.isSuccess {
+                    //worked
+                    print("success!")
+                    
+                    //send an email
+                    
+                    self.navigationController?.popViewController(animated: true)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+                } else {
+                    //didn't work
+                    print("error: \(String(describing: response.result.error))")
+                }
+            }
+            
+            
+        }
+        
     }
-    */
 
 }

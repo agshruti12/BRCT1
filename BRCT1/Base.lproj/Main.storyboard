@@ -99,7 +99,6 @@
                                 </state>
                                 <connections>
                                     <action selector="addToCalenderPressed:" destination="Lwn-zi-pOa" eventType="touchUpInside" id="mhZ-or-5Ps"/>
-                                    <action selector="registerPressed:" destination="JlB-dm-qSg" eventType="touchUpInside" id="0RN-Oq-eWU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -591,12 +590,22 @@
                                 <state key="normal" title="Add Event">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addEvent:" destination="Jkc-H8-TM4" eventType="touchUpInside" id="zbs-5C-Bqt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nB2-Xx-d4Z"/>
                     </view>
                     <navigationItem key="navigationItem" id="43d-Zb-WQ0"/>
+                    <connections>
+                        <outlet property="dateField" destination="7Wy-5B-NS5" id="5Hk-qc-cnX"/>
+                        <outlet property="descripField" destination="oTh-PZ-FWM" id="MGQ-kN-7Iu"/>
+                        <outlet property="endTime" destination="K7p-I5-rrL" id="Y6X-ay-gUO"/>
+                        <outlet property="eventField" destination="IxO-Q8-77i" id="WcN-iR-GOE"/>
+                        <outlet property="startField" destination="o2H-E9-y2r" id="rXY-yB-ZB4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojP-Jc-qck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -641,10 +650,75 @@
                     <view key="view" contentMode="scaleToFill" id="W65-L7-eeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-NU-7je">
+                                <rect key="frame" x="24" y="114" width="374" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOu-rn-s1i">
+                                <rect key="frame" x="20" y="209" width="366" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-sa-rsz">
+                                <rect key="frame" x="24" y="446" width="366" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaU-k0-mx5">
+                                <rect key="frame" x="167" y="585" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOb-2A-MVB">
+                                <rect key="frame" x="171" y="630" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyx-sr-38y">
+                                <rect key="frame" x="20" y="707" width="368" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-fA-F5j">
+                                <rect key="frame" x="20" y="773" width="374" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45440209409999999" green="0.58381935890000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Add to Calender">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCalendar:" destination="4uA-yz-yAl" eventType="touchUpInside" id="XCg-oE-Zc2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WYd-xd-vh8"/>
                     </view>
                     <navigationItem key="navigationItem" id="crr-Ht-AtZ"/>
+                    <connections>
+                        <outlet property="calendarButton" destination="DIm-fA-F5j" id="zR0-N8-uFR"/>
+                        <outlet property="clubName" destination="jvZ-sa-rsz" id="nG1-qS-1e1"/>
+                        <outlet property="dateLabel" destination="Dyx-sr-38y" id="XzF-GK-oqP"/>
+                        <outlet property="endTime" destination="kOb-2A-MVB" id="KCW-7M-jhO"/>
+                        <outlet property="eventDescrip" destination="xOu-rn-s1i" id="qYS-qv-xAi"/>
+                        <outlet property="eventName" destination="V9t-NU-7je" id="Idi-5e-QKR"/>
+                        <outlet property="startTime" destination="kaU-k0-mx5" id="ih6-GI-dYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dq-eG-ams" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
