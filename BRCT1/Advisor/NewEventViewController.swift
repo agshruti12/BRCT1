@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MessageUI
 
 class NewEventViewController: UIViewController {
     
@@ -36,6 +37,7 @@ class NewEventViewController: UIViewController {
                     print("success!")
                     
                     //send an email
+                    self.showMailComposer()
                     
                     self.navigationController?.popViewController(animated: true)
 
@@ -49,5 +51,39 @@ class NewEventViewController: UIViewController {
         }
         
     }
+    
+    func showMailComposer() {
+        
+        guard MFMailComposeViewController.canSendMail() else {return}
+        
+        let composer = MFMailComposeViewController()
+        composer.mailComposeDelegate = self
+        composer.setToRecipients(["agshrey@gmail.com"])
+        composer.setSubject("New Event for Club Whatever!")
+        composer.setMessageBody("There is a new event at this time on this date for this club", isHTML: false)
+        
+        present(composer, animated: true)
+    }
 
+}
+
+extension NewEventViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        if let _ = error {
+            controller.dismiss(animated: true)
+            return
+        }
+        
+        switch result {
+        case.cancelled:
+            print("Cancelled")
+        case .saved:
+            print("Saved")
+        case .sent:
+            print("Sent")
+        case .failed:
+            print("Failed to send")
+        }
+        controller.dismiss(animated: true)
+    }
 }
