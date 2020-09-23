@@ -18,11 +18,9 @@ class EventsInfoViewController: UIViewController {
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var addToCalenderButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addToCalenderButton.layer.cornerRadius = 10
 
         configureScreen()
     }
