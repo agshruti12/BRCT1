@@ -23,7 +23,7 @@ class NewEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
@@ -58,6 +58,7 @@ class NewEventViewController: UIViewController {
         
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
+        
         composer.setToRecipients(["agshrey@gmail.com"])
         composer.setSubject("New Event for Club Whatever!")
         composer.setMessageBody("There is a new event at this time on this date for this club", isHTML: false)
@@ -87,3 +88,4 @@ extension NewEventViewController: MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true)
     }
 }
+

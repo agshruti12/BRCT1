@@ -18,7 +18,7 @@ class AEventInfoViewController: UIViewController {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var calendarButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

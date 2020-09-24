@@ -18,12 +18,16 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var advisorEmail: UILabel!
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var normalBuddy: UIImageView!
+    @IBOutlet weak var happyBuddy: UIImageView!
+    
     var clubId:Int = 0
     var registered:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        happyBuddy.alpha = 0
         registerButton.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
         
@@ -43,6 +47,8 @@ class InfoViewController: UIViewController {
 
                     self.registerButton.backgroundColor = UIColor(red: 55/255, green: 196/255, blue: 111/255, alpha: 1.0)
                     self.registerButton.setTitle("Registered", for: .normal)
+                    self.normalBuddy.alpha = 0
+                    self.happyBuddy.alpha = 1
                     
                     self.registered = true
                     
@@ -69,6 +75,7 @@ class InfoViewController: UIViewController {
                 //worked
                 let clubData:JSON = JSON(response.result.value!)
                 
+                print(clubData[0]["club_name"].string)
                 self.clubName.text = clubData[0]["club_name"].string
                 self.clubDescription.text = clubData[0]["description"].string
                 self.advisorName.text = clubData[0]["user_name"].string
@@ -100,6 +107,8 @@ class InfoViewController: UIViewController {
                         //if user is registered
                         self.registerButton.backgroundColor = UIColor(red: 55/255, green: 196/255, blue: 111/255, alpha: 1.0)
                         self.registerButton.setTitle("Registered", for: .normal)
+                        self.normalBuddy.alpha = 0
+                        self.happyBuddy.alpha = 1
                         self.registered = true
                         
                         
