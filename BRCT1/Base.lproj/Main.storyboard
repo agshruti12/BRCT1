@@ -140,7 +140,7 @@
                                 <rect key="frame" x="20" y="813" width="305" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1784363091" green="0.55963838099999996" blue="0.81963831190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Add to Calender">
+                                <state key="normal" title="Add to Calendar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -199,6 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="02K-T1-juL"/>
                     <connections>
+                        <outlet property="addToCalendarButton" destination="KjY-06-jd3" id="je0-pz-XcZ"/>
                         <outlet property="clubNameLabel" destination="ERb-GJ-eYc" id="a8i-bn-sGU"/>
                         <outlet property="dateLabel" destination="OUQ-a6-V4B" id="I78-Av-Prn"/>
                         <outlet property="endTimeLabel" destination="Coo-6h-Lnz" id="L8u-Qd-r6J"/>

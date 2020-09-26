@@ -20,6 +20,7 @@ class EventsInfoViewController: UIViewController {
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var addToCalendarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,66 +38,97 @@ class EventsInfoViewController: UIViewController {
         
     }
     
-    func checkPermission(startDate: Date, endDate: Date, eventTitle: String) {
-        let eventStore = EKEventStore()
-        
-        switch EKEventStore.authorizationStatus(for: .event) {
-        case .notDetermined:
-            eventStore.requestAccess(to: .event) { (status, error) in
-                if status {}
-                else {
-                    print(error?.localizedDescription ?? "an error occurred")
-                }
-            }
-        case .restricted:
-            print("restricted")
-        case .denied:
-            print("denied")
-        case .authorized:
-            print("Authorized")
-            self.insertEvent(store: eventStore, startDate: startDate, endDate: endDate, eventName: eventTitle)
-        @unknown default:
-            print("Uknown")
-        }
-    }
+//    func checkPermission(startDate: Date, endDate: Date, eventTitle: String) {
+//        let eventStore = EKEventStore()
+//
+//        switch EKEventStore.authorizationStatus(for: .event) {
+//        case .notDetermined:
+//            eventStore.requestAccess(to: .event) { (status, error) in
+//                if status {}
+//                else {
+//                    print(error?.localizedDescription ?? "an error occurred")
+//                }
+//            }
+//        case .restricted:
+//            print("restricted")
+//        case .denied:
+//            print("denied")
+//        case .authorized:
+//            print("Authorized")
+//            self.insertEvent(store: eventStore, startDate: startDate, endDate: endDate, eventName: eventTitle)
+//        @unknown default:
+//            print("Uknown")
+//        }
+//    }
     
     //Calendar
-    func insertEvent (store: EKEventStore, startDate: Date, endDate: Date, eventName: String) {
-        print("inserting event")
-        let calendars = store.calendars(for: .event)
-        for calendar in calendars {
-            if calendar.title == "Home" {
-                print("in home calender")
-                let event = EKEvent(eventStore: store)
-                event.startDate = startDate
+//    func insertEvent (store: EKEventStore, startDate: Date, endDate: Date, eventName: String) {
+//        print("inserting event")
+//        let calendars = store.calendars(for: .event)
+//        for calendar in calendars {
+//            if calendar.title == "Home" {
+//                print("in home calender")
+//                let event = EKEvent(eventStore: store)
+//                event.startDate = startDate
+//                event.title = eventName
+//
+//                event.endDate = endDate
+////                let reminder1 = EKAlarm(relativeOffset: -60)
+////                let reminder2 = EKAlarm(relativeOffset: -300)
+////                event.alarms = [reminder1, reminder2]
+//
+//                do {
+//                    try store.save(event, span: .thisEvent)
+//                    print("event insert")
+//                } catch {
+//                    print(error.localizedDescription)
+//                }
+//
+//            }
+//        }
+//    }
+    
+    func insertEvent(start: Date, end: Date, eventName: String, eventNotes: String) {
+        let eventStore: EKEventStore = EKEventStore()
+        
+        eventStore.requestAccess(to: .event) { (granted, error) in
+            if granted && (error == nil) {
+                print("granted: \(granted)")
+                print("error: \(error)")
+                
+                let event:EKEvent = EKEvent(eventStore: eventStore)
                 event.title = eventName
-                
-                event.endDate = endDate
-//                let reminder1 = EKAlarm(relativeOffset: -60)
-//                let reminder2 = EKAlarm(relativeOffset: -300)
-//                event.alarms = [reminder1, reminder2]
-                
+                event.startDate = start
+                event.endDate = end
+                event.notes = eventNotes
+                event.calendar = eventStore.defaultCalendarForNewEvents
                 do {
-                    try store.save(event, span: .thisEvent)
-                    print("event insert")
-                } catch {
-                    print(error.localizedDescription)
+                    try eventStore.save(event, span: .thisEvent)
+                } catch let error as NSError {
+                    print("error: \(error)")
                 }
+                print("saved event")
                 
+            } else {
+                print(error)
             }
         }
     }
     
     @IBAction func addToCalenderPressed(_ sender: UIButton) {
         
+        let eventName = eventNameLabel.text!
         let startttime = startTimeLabel.text!
         let endtime = endTimeLabel.text!
         let date = dateLabel.text!
+        let summary = eventDescriptionLabel.text!
         let start = convertStringToDate(dateString: date, timeString: startttime)
         let end = convertStringToDate(dateString: date, timeString: endtime)
         print(start)
         print(end)
-        checkPermission(startDate: start, endDate: end, eventTitle: date)
+        insertEvent(start: start, end: end, eventName: eventName, eventNotes: summary)
+        addToCalendarButton.setTitle("Added", for: .normal)
+        //checkPermission(startDate: start, endDate: end, eventTitle: date)
         
         
     }
@@ -132,8 +164,7 @@ extension EventsInfoViewController {
             }
         }
         
-        let typedDate = "January 17, 2020"
-        let words = typedDate.split(separator: " ")
+        let words = dateString.split(separator: " ")
         var date = words[1]
         let month = words[0]
         let year = words[2]
