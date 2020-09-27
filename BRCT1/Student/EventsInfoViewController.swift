@@ -9,6 +9,8 @@
 import UIKit
 import EventKit
 import MessageUI
+import Alamofire
+import SwiftyJSON
 
 class EventsInfoViewController: UIViewController {
     
@@ -155,11 +157,24 @@ extension EventsInfoViewController {
             }
             else if startTime.hasSuffix("P") {
                 startTime.removeLast()
-                var firstNumber = Int(String(startTime.first!))
-                firstNumber! += 12
-                let unwrappedFirstNumber = firstNumber!
-                let stringVersion = String(unwrappedFirstNumber)
-                startTime.removeFirst()
+                var start = startTime
+                start.removeLast()
+                start.removeLast()
+                start.removeLast()
+                
+                var hour = Int(String(start))
+                hour! += 12
+                let unwrappedHour = hour!
+                
+                let stringVersion = String(unwrappedHour)
+                
+                if start.count == 1 {
+                    startTime.removeFirst()
+                } else if start.count == 2 {
+                    startTime.removeFirst()
+                    startTime.removeFirst()
+                }
+                
                 startTime = stringVersion + startTime + ":00+0000"
             }
         }
@@ -190,10 +205,12 @@ extension EventsInfoViewController {
         
         
         let finalFormattedString = "\(year)-\(monthNumber)-\(date)T\(startTime)"
+        print("final" + finalFormattedString)
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         let dateFromString = dateFormatter.date(from: finalFormattedString)
+        
         let finalDate = dateFromString!
         return finalDate
     }
@@ -230,14 +247,31 @@ extension EventsInfoViewController: MFMailComposeViewControllerDelegate {
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
         
-        composer.setToRecipients(["agshrey@gmail.com"])
-        if status == "Yes" {
-            composer.setSubject("I'll be there!")
-            composer.setMessageBody("Hi, I can make it to \(eventName)", isHTML: false)
-        } else if status == "No" {
-        composer.setSubject("Sorry, I can't attend")
-        composer.setMessageBody("Sorry, I can't make it to \(eventName)", isHTML: false)
+        var advisorEmail:String!
+        
+        let url = "http:192.168.1.41:3003/club/" + clubNameLabel.text!
+        Alamofire.request(url, method: .get).responseJSON {
+            response in
+            if response.result.isSuccess {
+                //worked
+                let data:JSON = JSON(response.result.value!)
+                
+                advisorEmail = data[0]["user_email"].stringValue
+                
+                composer.setToRecipients([advisorEmail])
+                if status == "Yes" {
+                    composer.setSubject("I'll be there!")
+                    composer.setMessageBody("Hi, I can make it to \(eventName)", isHTML: false)
+                } else if status == "No" {
+                    composer.setSubject("Sorry, I can't attend")
+                    composer.setMessageBody("Sorry, I can't make it to \(eventName)", isHTML: false)
+                }
+                self.present(composer, animated: true)
+            } else {
+                print("error: \(String(describing: response.result.error))")
+            }
         }
-        present(composer, animated: true)
+        
+        
     }
 }

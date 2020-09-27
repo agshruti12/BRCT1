@@ -39,7 +39,7 @@ class NewEventViewController: UIViewController {
                     //send an email
                     self.showMailComposer()
                     
-                    self.navigationController?.popViewController(animated: true)
+                    
 
                 } else {
                     //didn't work
@@ -56,14 +56,48 @@ class NewEventViewController: UIViewController {
         
         guard MFMailComposeViewController.canSendMail() else {return}
         
-        let composer = MFMailComposeViewController()
-        composer.mailComposeDelegate = self
+        let url = "http:192.168.1.41:3003/usersinclub" + String(clubId!)
+        Alamofire.request(url, method: .get).responseJSON {
+            response in
+            if response.result.isSuccess {
+                //worked
+                let users:JSON = JSON(response.result.value!)
+                var userEmails:[String]!
+                var clubName:String!
+                
+                let composer = MFMailComposeViewController()
+                composer.mailComposeDelegate = self
+                
+                if users.count > 0 {
+                  for index in 0...(users.count-1) {
+                    userEmails.append(users[index]["user_email"].stringValue)
+                  }
+                    clubName = users[0]["club_name"].stringValue
+                }
+                
+                if let mails = userEmails, let name = clubName {
+                    composer.setBccRecipients(mails)
+                    composer.setSubject("You have a new event for " + name)
+                    let body =  "You have a new event " + self.eventField.text! + " from " + self.startField.text! + " to " + self.endTime.text! + " for " + name + "."
+                    composer.setMessageBody(body, isHTML: false)
+                    
+                    self.present(composer, animated: true)
+                }
+                
+              
+                self.navigationController?.popViewController(animated: true)
+                
+                
+                
+            } else {
+                //didn't work
+                print("error: \(String(describing: response.result.error))")
+                
+                self.navigationController?.popViewController(animated: true)
+            }
         
-        composer.setToRecipients(["agshrey@gmail.com"])
-        composer.setSubject("New Event for Club Whatever!")
-        composer.setMessageBody("There is a new event at this time on this date for this club", isHTML: false)
-        
-        present(composer, animated: true)
+        }
+       
     }
 
 }
