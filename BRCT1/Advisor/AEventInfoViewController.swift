@@ -105,15 +105,46 @@ extension AEventInfoViewController {
             startTime.removeLast()
             if startTime.hasSuffix("A") {
                 startTime.removeLast()
-                startTime = startTime + ":00+0000"
+                var start = startTime
+                start.removeLast()
+                start.removeLast()
+                start.removeLast()
+                
+                var hour = Int(String(start))
+                hour! += 5
+                let unwrappedHour = hour!
+                
+                let stringVersion = String(unwrappedHour)
+                
+                if start.count == 1 {
+                    startTime.removeFirst()
+                } else if start.count == 2 {
+                    startTime.removeFirst()
+                    startTime.removeFirst()
+                }
+                
+                startTime = stringVersion + startTime + ":00+0000"
             }
             else if startTime.hasSuffix("P") {
                 startTime.removeLast()
-                var firstNumber = Int(String(startTime.first!))
-                firstNumber! += 12
-                let unwrappedFirstNumber = firstNumber!
-                let stringVersion = String(unwrappedFirstNumber)
-                startTime.removeFirst()
+                var start = startTime
+                start.removeLast()
+                start.removeLast()
+                start.removeLast()
+                
+                var hour = Int(String(start))
+                hour! += 17
+                let unwrappedHour = hour!
+                
+                let stringVersion = String(unwrappedHour)
+                
+                if start.count == 1 {
+                    startTime.removeFirst()
+                } else if start.count == 2 {
+                    startTime.removeFirst()
+                    startTime.removeFirst()
+                }
+                
                 startTime = stringVersion + startTime + ":00+0000"
             }
         }

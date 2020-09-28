@@ -67,6 +67,7 @@
 		B600FA422513F34C0004F739 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		B630AB5D24FD88FE0039FAEA /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B63E8B41250C37B30011A795 /* AInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AInfoViewController.swift; sourceTree = "<group>"; };
+		B649FF742521268C00046DD7 /* BRCT1Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BRCT1Debug.entitlements; sourceTree = "<group>"; };
 		B686567824F8871600F0CAC1 /* BRCT1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRCT1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B686567B24F8871600F0CAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B686567D24F8871600F0CAC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 		B686567A24F8871600F0CAC1 /* BRCT1 */ = {
 			isa = PBXGroup;
 			children = (
+				B649FF742521268C00046DD7 /* BRCT1Debug.entitlements */,
 				E23350FF2502EB360053B9A7 /* Home, Login, Signup */,
 				E2E614FE250AEB62009FDB97 /* Student */,
 				E2E614FF250AEBAD009FDB97 /* Advisor */,
@@ -693,9 +695,9 @@
 			baseConfigurationReference = F208798A335763C16841BAAA /* Pods-BRCT1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BRCT1/BRCT1.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BRCT1/BRCT1Debug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NUDN2NK8A;
+				DEVELOPMENT_TEAM = 8LG3532T3K;
 				INFOPLIST_FILE = BRCT1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -717,7 +719,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BRCT1/BRCT1.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NUDN2NK8A;
+				DEVELOPMENT_TEAM = 8LG3532T3K;
 				INFOPLIST_FILE = BRCT1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (

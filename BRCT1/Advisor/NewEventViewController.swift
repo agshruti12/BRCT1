@@ -14,6 +14,7 @@ import MessageUI
 class NewEventViewController: UIViewController {
     
     var clubId:Int!
+    var clubName:String!
 
     @IBOutlet weak var eventField: UITextField!
     @IBOutlet weak var descripField: UITextField!
@@ -23,6 +24,7 @@ class NewEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
@@ -63,7 +65,6 @@ class NewEventViewController: UIViewController {
                 //worked
                 let users:JSON = JSON(response.result.value!)
                 var userEmails:[String]!
-                var clubName:String!
                 
                 let composer = MFMailComposeViewController()
                 composer.mailComposeDelegate = self
@@ -72,11 +73,11 @@ class NewEventViewController: UIViewController {
                   for index in 0...(users.count-1) {
                     userEmails.append(users[index]["user_email"].stringValue)
                   }
-                    clubName = users[0]["club_name"].stringValue
+                    
                 }
                 
-                if let mails = userEmails, let name = clubName {
-                    composer.setBccRecipients(mails)
+                if let mails = userEmails, let name = self.clubName {
+                    composer.setToRecipients(mails)
                     composer.setSubject("You have a new event for " + name)
                     let body =  "You have a new event " + self.eventField.text! + " from " + self.startField.text! + " to " + self.endTime.text! + " for " + name + "."
                     composer.setMessageBody(body, isHTML: false)

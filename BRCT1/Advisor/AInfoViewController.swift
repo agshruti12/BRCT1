@@ -22,6 +22,7 @@ class AInfoViewController: UIViewController {
     var studentEmails:[String] = []
     
     var clubId:Int!
+    var name:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +72,7 @@ class AInfoViewController: UIViewController {
             let destinationVC = segue.destination as! NewEventViewController
             
             destinationVC.clubId = clubId
+            destinationVC.clubName = clubName.text
         }
     }
     

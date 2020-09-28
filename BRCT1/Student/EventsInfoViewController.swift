@@ -153,7 +153,25 @@ extension EventsInfoViewController {
             startTime.removeLast()
             if startTime.hasSuffix("A") {
                 startTime.removeLast()
-                startTime = startTime + ":00+0000"
+                var start = startTime
+                start.removeLast()
+                start.removeLast()
+                start.removeLast()
+                
+                var hour = Int(String(start))
+                hour! += 5
+                let unwrappedHour = hour!
+                
+                let stringVersion = String(unwrappedHour)
+                
+                if start.count == 1 {
+                    startTime.removeFirst()
+                } else if start.count == 2 {
+                    startTime.removeFirst()
+                    startTime.removeFirst()
+                }
+                
+                startTime = stringVersion + startTime + ":00+0000"
             }
             else if startTime.hasSuffix("P") {
                 startTime.removeLast()
@@ -163,7 +181,7 @@ extension EventsInfoViewController {
                 start.removeLast()
                 
                 var hour = Int(String(start))
-                hour! += 12
+                hour! += 17
                 let unwrappedHour = hour!
                 
                 let stringVersion = String(unwrappedHour)
@@ -249,7 +267,19 @@ extension EventsInfoViewController: MFMailComposeViewControllerDelegate {
         
         var advisorEmail:String!
         
-        let url = "http:192.168.1.41:3003/club/" + clubNameLabel.text!
+        var clubString = clubNameLabel.text!.split(separator: " ")
+        var urlParam:String = ""
+        
+        if clubString.count > 1 {
+            for index in 0..<(clubString.count - 1) {
+                urlParam += clubString[index] + "%20"
+            }
+            urlParam += clubString[clubString.count - 1]
+        } else {
+            urlParam = String(clubString[0])
+        }
+        
+        let url = "http:192.168.1.41:3003/clubname/" + urlParam
         Alamofire.request(url, method: .get).responseJSON {
             response in
             if response.result.isSuccess {
